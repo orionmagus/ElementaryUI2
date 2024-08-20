@@ -1,0 +1,14 @@
+@import "../../style/vars";
+.date-picker {
+  .cal-frame {
+    .month-view {
+      .week-view {
+        .datum {
+          .selected {
+            background-color: $secondary;
+          }
+        }
+      }
+    }
+  }
+}

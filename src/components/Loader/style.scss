@@ -1,0 +1,124 @@
+@import "anim";
+@import "../../style/vars";
+$size: 30;
+$anim_dur: 1.7s;
+$anim_delay_offset: -0.16s;
+.wrap-loader {
+  width: fit-content;
+  padding: 18px;
+}
+.loader,
+.comet-loader {
+  position: relative;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+}
+.comet-loader {
+  color: $text_fg;
+  font-size: $size * 1px;
+  border-radius: 50%;
+  -webkit-animation: cometLoaderAnim $anim_dur infinite ease,
+    rotate360Anim $anim_dur infinite ease;
+  animation: cometLoaderAnim $anim_dur infinite ease,
+    rotate360Anim $anim_dur infinite ease;
+}
+.bar-loader,
+.bar-loader:before,
+.bar-loader:after {
+  background: $text_fg;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.bar-loader {
+  color: $text_fg;
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.bar-loader:before,
+.bar-loader:after {
+  position: absolute;
+  top: 50%;
+  content: " ";
+}
+.bar-loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.bar-loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+// .bar-loader {
+//   -webkit-animation: barLoadAnim $anim_dur infinite ease-in-out;
+//   animation: barLoadAnim $anim_dur infinite ease-in-out;
+//   width: 1em;
+//   padding: 0 1.5em;
+//   height: 4em;
+//   &:before,
+//   &:after {
+//     background: $primary;
+//     -webkit-animation: barLoadAnim $anim_dur infinite ease-in-out;
+//     animation: barLoadAnim $anim_dur infinite ease-in-out;
+//     width: 1em;
+//     height: 4em;
+//   }
+//   box-shadow: 1px 1px #36f;
+//   text-indent: -9999em;
+//   position: relative;
+//   font-size: 11px;
+//   -webkit-transform: translateZ(0);
+//   -ms-transform: translateZ(0);
+//   transform: translateZ(0);
+//   animation-delay: $anim_delay_offset;
+//   &:before,
+//   &:after {
+//     position: absolute;
+//     top: 50%;
+//     content: " ";
+//   }
+//   &:before {
+//     left: -1.5em;
+//     animation-delay: $anim_delay_offset * 2;
+//   }
+//   &:after {
+//     left: 1.5em;
+//   }
+// }

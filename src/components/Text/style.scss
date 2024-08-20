@@ -1,0 +1,10 @@
+@import "../../style/vars";
+.text {
+  outline: none;
+  text-decoration: none;
+  text-size-adjust: 100%;
+  font-size: $text_size;
+}
+.heading {
+  font-size: 250%;
+}

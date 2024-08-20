@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+
+  <body>
+    <noscript> You need to enable JavaScript to run this app. </noscript>
+    <svg style="position: absolute;">
+      <defs id="globalDefs">
+        <filter id="shadowed-goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+            result="goo"
+          />
+          <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+          <feColorMatrix
+            in="shadow"
+            mode="matrix"
+            values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2"
+            result="shadow"
+          />
+          <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+          <feComposite in2="shadow" in="goo" result="goo" />
+          <feComposite in2="goo" in="SourceGraphic" result="mix" />
+        </filter>
+        <filter id="goo_new">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+            result="goo"
+          />
+          <feComposite in2="goo" in="SourceGraphic" result="mix" />
+        </filter>
+        <filter id="goo">
+          <feGaussianBlur
+            in="SourceGraphic"
+            stdDeviation="10"
+            result="blur"
+          ></feGaussianBlur>
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+            result="goo"
+          ></feColorMatrix>
+          <feComposite
+            in="SourceGraphic"
+            in2="goo"
+            operator="atop"
+          ></feComposite>
+        </filter>
+        <filter
+          id="glow"
+          color-interpolation-filters="sRGB"
+          height="150%"
+          width="150%"
+        >
+          <feGaussianBlur stdDeviation="1" result="result6"></feGaussianBlur>
+          <feComposite
+            in="SourceGraphic"
+            in2="result6"
+            operator="lighter"
+            result="result8"
+          ></feComposite>
+          <feComposite
+            in="result8"
+            in2="SourceAlpha"
+            result="result9"
+          ></feComposite>
+          <feColorMatrix
+            result="result10"
+            values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+          ></feColorMatrix>
+          <feBlend in="result10" in2="result6" mode="soft-light"></feBlend>
+        </filter>
+        <filter
+          id="glow0"
+          color-interpolation-filters="sRGB"
+          height="150%"
+          width="150%"
+        >
+          <feGaussianBlur stdDeviation="0" result="result6"></feGaussianBlur>
+          <feComposite
+            in="SourceGraphic"
+            in2="result6"
+            operator="lighter"
+            result="result8"
+          ></feComposite>
+          <feComposite
+            in="result8"
+            in2="SourceAlpha"
+            result="result9"
+          ></feComposite>
+          <feColorMatrix
+            result="result10"
+            values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+          ></feColorMatrix>
+          <feBlend in="result10" in2="result6" mode="soft-light"></feBlend>
+        </filter>
+        <filter
+          id="glow3"
+          color-interpolation-filters="sRGB"
+          height="150%"
+          width="150%"
+        >
+          <feGaussianBlur stdDeviation="3" result="result6"></feGaussianBlur>
+          <feComposite
+            in="SourceGraphic"
+            in2="result6"
+            operator="lighter"
+            result="result8"
+          ></feComposite>
+          <feComposite
+            in="result8"
+            in2="SourceAlpha"
+            result="result9"
+          ></feComposite>
+          <feColorMatrix
+            result="result10"
+            values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+          ></feColorMatrix>
+          <feBlend in="result10" in2="result6" mode="soft-light"></feBlend>
+        </filter>
+        <filter
+          id="glow6"
+          color-interpolation-filters="sRGB"
+          height="150%"
+          width="150%"
+        >
+          <feGaussianBlur stdDeviation="6" result="result6"></feGaussianBlur>
+          <feComposite
+            in="SourceGraphic"
+            in2="result6"
+            operator="lighter"
+            result="result8"
+          ></feComposite>
+          <feComposite
+            in="result8"
+            in2="SourceAlpha"
+            result="result9"
+          ></feComposite>
+          <feColorMatrix
+            result="result10"
+            values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0 "
+          ></feColorMatrix>
+          <feBlend in="result10" in2="result6" mode="soft-light"></feBlend>
+        </filter>
+        <filter
+          height="1.2003032"
+          y="-0.1001516"
+          width="1.053472"
+          x="-0.026735993"
+          id="filter936"
+          style="color-interpolation-filters:sRGB"
+        >
+          <feOffset
+            flood-opacity="0.52000000000000002"
+            id="feOffset926"
+            dx="0"
+            dy="2"
+          />
+          <feGaussianBlur
+            flood-opacity="0.57999999999999996"
+            id="feGaussianBlur928"
+            result="blur"
+            stdDeviation="1.9495992"
+          />
+          <feFlood
+            id="feFlood930"
+            result="flood"
+            flood-opacity="0.57635467980295563"
+            flood-color="rgb(0,0,0)"
+          />
+          <feComposite
+            id="feComposite932"
+            result="composite"
+            operator="in"
+            in2="SourceGraphic"
+            in="flood"
+          />
+          <feBlend id="feBlend934" mode="normal" in2="composite" in="blur" />
+        </filter>
+        <filter id="filter4704" style="color-interpolation-filters:sRGB">
+          <feBlend id="feBlend4706" in2="BackgroundImage" mode="normal" />
+        </filter>
+        <filter
+          height="1.9504565"
+          y="-0.47522825"
+          width="1.2537293"
+          x="-0.12686469"
+          style="color-interpolation-filters:sRGB"
+          id="filter1215"
+        >
+          <feFlood
+            flood-opacity="0.498039"
+            flood-color="rgb(0,0,0)"
+            result="flood"
+            id="feFlood1205"
+          />
+          <feComposite
+            in="flood"
+            in2="SourceGraphic"
+            operator="out"
+            result="composite1"
+            id="feComposite1207"
+          />
+          <feGaussianBlur
+            in="composite1"
+            stdDeviation="9.2510221"
+            result="blur"
+            id="feGaussianBlur1209"
+          />
+          <feOffset dx="0.1" dy="1.2" result="offset" id="feOffset1211" />
+          <feComposite
+            in="offset"
+            in2="SourceGraphic"
+            operator="atop"
+            result="composite2"
+            id="feComposite1213"
+          />
+        </filter>
+        <filter
+          height="1.9452145"
+          y="-0.47260723"
+          width="1.2523299"
+          x="-0.12616497"
+          id="filter4572"
+          style="color-interpolation-filters:sRGB"
+        >
+          <feGaussianBlur id="feGaussianBlur4574" stdDeviation="9.2" />
+          <feBlend id="feBlend4576" in2="BackgroundImage" mode="hard-light" />
+        </filter>
+        <filter id="filter5176" style="color-interpolation-filters:sRGB">
+          <feFlood
+            id="feFlood5166"
+            result="flood"
+            flood-color="rgb(0,0,0)"
+            flood-opacity="0.48264984227129337"
+          />
+          <feComposite
+            id="feComposite5168"
+            result="composite1"
+            operator="in"
+            in2="SourceGraphic"
+            in="flood"
+          />
+          <feGaussianBlur
+            flood-opacity="0.47999999999999998"
+            id="feGaussianBlur5170"
+            result="blur"
+            stdDeviation="15.58"
+            in="composite1"
+          />
+          <feOffset
+            id="feOffset5172"
+            result="offset"
+            dy="4.7999999999999998"
+            dx="0"
+          />
+          <feComposite
+            id="feComposite5174"
+            result="fbSourceGraphic"
+            operator="over"
+            in2="offset"
+            in="SourceGraphic"
+          />
+          <feColorMatrix
+            id="feColorMatrix5178"
+            values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+            in="fbSourceGraphic"
+            result="fbSourceGraphicAlpha"
+          />
+          <feFlood
+            in="fbSourceGraphic"
+            result="flood"
+            flood-color="rgb(0,0,0)"
+            flood-opacity="0.498039"
+            id="feFlood5180"
+          />
+          <feComposite
+            result="composite1"
+            operator="in"
+            in="flood"
+            id="feComposite5182"
+            in2="fbSourceGraphic"
+          />
+          <feGaussianBlur
+            result="blur"
+            stdDeviation="14.6"
+            in="composite1"
+            id="feGaussianBlur5184"
+          />
+          <feOffset result="offset" dy="11.5" dx="0" id="feOffset5186" />
+          <feComposite
+            result="fbSourceGraphic"
+            operator="over"
+            in="fbSourceGraphic"
+            id="feComposite5188"
+            in2="offset"
+          />
+          <feColorMatrix
+            id="feColorMatrix5190"
+            values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+            in="fbSourceGraphic"
+            result="fbSourceGraphicAlpha"
+          />
+          <feFlood
+            in="fbSourceGraphic"
+            result="flood"
+            flood-color="rgb(0,0,0)"
+            flood-opacity="0.498039"
+            id="feFlood5192"
+          />
+          <feComposite
+            result="composite1"
+            operator="in"
+            in="flood"
+            id="feComposite5194"
+            in2="fbSourceGraphic"
+          />
+          <feGaussianBlur
+            result="blur"
+            stdDeviation="14.6"
+            in="composite1"
+            id="feGaussianBlur5196"
+          />
+          <feOffset result="offset" dy="11.5" dx="0" id="feOffset5198" />
+          <feComposite
+            result="composite2"
+            operator="over"
+            in="fbSourceGraphic"
+            id="feComposite5200"
+            in2="offset"
+          />
+        </filter>
+
+        <filter
+          height="1.2222082"
+          y="-0.1111041"
+          width="1.0821937"
+          x="-0.041096849"
+          id="filter2850"
+          style="color-interpolation-filters:sRGB"
+        >
+          <feGaussianBlur id="feGaussianBlur2852" stdDeviation="0.85986328" />
+        </filter>
+        <filter id="filter2886" style="color-interpolation-filters:sRGB">
+          <feBlend id="feBlend2888" in2="BackgroundImage" mode="hard-light" />
+        </filter>
+        <filter id="hardLight" style="color-interpolation-filters:sRGB">
+          <feBlend id="feBlend2904" in2="BackgroundImage" mode="color-dodge" />
+        </filter>
+      </defs>
+    </svg>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>

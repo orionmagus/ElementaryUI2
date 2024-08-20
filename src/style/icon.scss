@@ -1,0 +1,52 @@
+@import "vars";
+@import "animations";
+.icon {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  &-label {
+    display: none;
+  }
+}
+.path-icon {
+  display: block;
+  z-index: 20;
+  width: var(--sz);
+  height: var(--sz);
+  stroke-width: 0px;
+  stroke: currentColor;
+  fill: currentColor;
+  backface-visibility: hidden;
+  transform-origin: 50% 50%;
+  perspective: 1000px;
+  transform: translateZ(0) scale(1);
+  transition: all 0.8s ease-in-out 0.8s;
+  // :hover {
+  //   transition: all 0.8s ease-in-out 0.8s;
+  //   transform-origin: 50% 50%;
+  //   transform: scale(2.5) translateZ(120px);
+  // }
+  &.x2 {
+    width: 2rem;
+    height: 2rem;
+  }
+  &.positive {
+    stroke: $success;
+    fill: $success;
+  }
+  &.not {
+    stroke: $bg;
+    fill: $bg;
+  }
+  &.negative {
+    stroke: $error;
+    fill: $error;
+  }
+  &.spin {
+    animation: rotate360Anim 1.7s cubic-bezier(0.42, 0, 0.58, 1) infinite
+      forwards;
+  }
+}

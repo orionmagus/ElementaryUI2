@@ -1,0 +1,29 @@
+---
+Page: 
+  index: index
+  icon: dashboard
+  area: main
+  path: 
+    - simple_reports
+    - index
+  text: Main Dashboard
+  order: 0
+  base: DashboardPage
+Access:
+  - Groups:
+    - XDS
+    - General
+    - ServiceProvider Staff
+      - Roles:
+        - Scheduler
+        - Team Leader
+        - Assessor
+        - Manager
+    - Bank Staff
+      - Roles:
+        - Claim handler
+        - Team Leader
+        - Internal Assessor
+        - Loss Adjuster
+        - Supervisor
+        - Manager

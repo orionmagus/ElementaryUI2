@@ -1,0 +1,93 @@
+input {
+  outline: none;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+input[type="search"],
+.search {
+  $component_bg: var(--component-bg);
+  $input_focus_bg: var(--component-fg);
+  $border: var(--border);
+  $text_fg: var(--text-fg);
+  $primary: var(--primary);
+  $primary_highlight: var(--primary-highlight);
+  $secondary_highlight: var(--secondary-highlight);
+  $success: var(--succcess);
+  $error: var(--error);
+  $open_width: var(--opened-width);
+  $round_radius: var(--round-radius);
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  font-family: inherit;
+  font-size: 100%;
+  background: transparent
+    url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat
+    9px center;
+  border: solid 1px $border;
+  padding: 9px 10px 9px 32px;
+  width: var(--default-width);
+  border-radius: $round_radius;
+  cursor: pointer;
+  transition: all 0.5s;
+  transition-delay: 0.4s;
+  &:focus {
+    width: $open_width;
+    background-color: $component_bg;
+    border-color: $primary_highlight;
+    box-shadow: 0 0 5px rgba(109, 207, 246, 0.5);
+  }
+
+  &:-moz-placeholder {
+    color: #999;
+  }
+  &::-webkit-input-placeholder {
+    color: #999;
+  }
+
+  &.icon {
+    width: var(--iconified-width);
+    padding-left: 10px;
+    color: transparent;
+    &:-moz-placeholder {
+      color: transparent;
+    }
+    &::-webkit-input-placeholder {
+      color: transparent;
+    }
+    &.focus {
+      &:hover {
+        background-color: $input_focus_bg;
+      }
+      &:focus {
+        width: $open_width;
+        padding-left: 32px;
+        color: $text_fg;
+      }
+    }
+    &.hover {
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.8s;
+      &:focus {
+        width: $open_width;
+        padding-left: 32px;
+        color: $text_fg;
+        cursor: auto;
+        transition-delay: 0.4s;
+      }
+      &:hover {
+        transition-delay: 0.4s;
+        &:placehlder,
+        &:-webkit-input-placeholder,
+        &:-moz-placeholder {
+          color: #999;
+        }
+        width: $open_width;
+        padding-left: 32px;
+        color: $text_fg;
+        background-color: $input_focus_bg;
+      }
+    }
+  }
+}

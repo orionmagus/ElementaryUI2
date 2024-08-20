@@ -1,0 +1,16 @@
+.slider{
+  position: relative;
+  cursor: pointer;
+  background: 10px 10px linear-gradient(transparent 47.99999%,darkgrey 48%, grep 52%,transparent 52.001%) no-repeat;
+  & .handle{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 45px;
+    display: block;
+    background: blue;
+  }
+  & .value{
+    pointer-events: none;
+  }
+}

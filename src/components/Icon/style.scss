@@ -1,0 +1,53 @@
+@import "../../style/vars";
+[class^="icon-"],
+[class*=" icon-"]{
+  height: 2em;
+  width: 2em;
+  display: inline-block;
+  fill: currentColor;
+  stroke: currentColor;
+}
+
+.icon {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: start;
+  padding-left: 5px;
+  align-items: center;
+  cursor: pointer;
+  width: var(--sz);
+  height: var(--sz);
+  position: relative;
+  &-label {
+   display: none;
+  }
+  &-path {
+    display: block;
+    z-index: 20;
+    width: var(--sz);
+    height: var(--sz);
+    fill: currentColor;
+    backface-visibility: hidden;
+    transform-origin: 50% 50%;
+    perspective: 1000px;
+    transform: translateZ(0) scale(1);
+    transition: all 0.8s ease-in-out 0.8s;
+ 
+    &.x2 {
+      width: 2rem;
+      height: 2rem;
+    }
+    &.positive {
+      stroke: $success;
+      fill: $success;
+    }
+    &.not {
+      stroke: $bg;
+      fill: $bg;
+    }
+    &.negative {
+      stroke: $error;
+      fill: $error;
+    }
+  }
+}

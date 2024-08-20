@@ -1,0 +1,9 @@
+---
+Application:
+  type: container
+  container: Page
+  children:
+  - Store:
+    type: context
+    children:
+      - DataEngine: {type: context}

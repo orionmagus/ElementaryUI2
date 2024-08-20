@@ -1,0 +1,40 @@
+{
+  "status": "done",
+  "publicPath": "/dashboard/",
+  "chunks": {
+    "null": [
+      {
+        "name": "static/js/0.f582e65b.chunk.js",
+        "publicPath": "/dashboard/static/js/0.f582e65b.chunk.js",
+        "path": "/home/ryan/Development/react-dashboard-v1/build/static/js/0.f582e65b.chunk.js"
+      },
+      {
+        "name": "static/js/0.f582e65b.chunk.js.map",
+        "publicPath": "/dashboard/static/js/0.f582e65b.chunk.js.map",
+        "path": "/home/ryan/Development/react-dashboard-v1/build/static/js/0.f582e65b.chunk.js.map"
+      }
+    ],
+    "main": [
+      {
+        "name": "static/js/main.9ec79b3f.js",
+        "publicPath": "/dashboard/static/js/main.9ec79b3f.js",
+        "path": "/home/ryan/Development/react-dashboard-v1/build/static/js/main.9ec79b3f.js"
+      },
+      {
+        "name": "static/css/main.9cff685b.css",
+        "publicPath": "/dashboard/static/css/main.9cff685b.css",
+        "path": "/home/ryan/Development/react-dashboard-v1/build/static/css/main.9cff685b.css"
+      },
+      {
+        "name": "static/js/main.9ec79b3f.js.map",
+        "publicPath": "/dashboard/static/js/main.9ec79b3f.js.map",
+        "path": "/home/ryan/Development/react-dashboard-v1/build/static/js/main.9ec79b3f.js.map"
+      },
+      {
+        "name": "static/css/main.9cff685b.css.map",
+        "publicPath": "/dashboard/static/css/main.9cff685b.css.map",
+        "path": "/home/ryan/Development/react-dashboard-v1/build/static/css/main.9cff685b.css.map"
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+.center-content {
+  display: flex;
+
+  &.onboth,
+  &.onwidth {
+    width: 100%;
+    justify-content: center;
+  }
+
+  &.onboth,
+  &.onheight {
+    align-items: center;
+    height: 100%;
+  }
+}

@@ -1,0 +1,25 @@
+body,
+.scrollable{
+  ::-webkit-scrollbar,
+  & .scrollbar{
+    -webkit-appearance:none;
+    width:10px;
+    height:10px;
+  }
+  ::-webkit-scrollbar-track,
+  & .scrollbar-track{
+    background:rgba(0,0,0,.1);
+    border-radius:0;
+  }
+  ::-webkit-scrollbar-thumb
+  & .scrollbar-thumb{
+    cursor:pointer;
+    border-radius:5px;
+    background:rgba(0,0,0,.25);
+    &:hover{
+      background:hsla(202,5%,52%,.8);
+    }  
+    transition:color .2s ease;
+  }
+}
+

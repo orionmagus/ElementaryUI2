@@ -1,0 +1,41 @@
+---
+"Directions":
+  ["keyboard_arrow_up", "keyboard_arrow_down", "keyboard_arrow_left", "keyboard_arrow_right"]
+"Circle":
+  ["check_circle", "add_circle", "remove_circle"]
+"Dialog":
+  ["info", "warning", "report", "error"]
+"Dialog Outline":
+  "info_outline", "error_outline", "help_outline"
+"Flow Action":
+  "done", "cancel", "remove", "block", "add", "mode_edit"
+"Media Navigate":
+  "first_page", "navigate_before", "fast_rewind", "stop", "play_arrow", "pause", "fast_forward", "navigate_next", "last_page"
+"UI Actions":
+  "date_range", "menu", "more_vert", "more_horiz", "drag_handle"
+"Map Actions":
+  "search", "zoom_out", "zoom_in", "zoom_out_map", "compare_arrows", "track_changes", "input", "close", "fullscreen_exit", "fullscreen", "exit_to_app"
+"Task":
+  "refresh", "get_app", "play_for_work"
+"Auth":
+  "sign in", "sign out", "account_circle"
+"Data order":
+  "filter_list", "filter_none", "swap_vert", "sort"
+"Menu Icons":
+  "pie-graph", "map-marker", "pie-chart", "bar-chart", "cubes", "stats-bars", "pie_chart", "trending_down", "bubble_chart", "poll", "multiline_chart", "trending_up", "data_usage", "timeline", "graphic_eq", "show_chart", "web", "donut_large", "equalizer", "map", "network_check", "room", "widgets", "settings", "options","contact_phone"
+"Layer Toggle":
+  "layers_clear", "layers"
+"YN Toggle":
+  "do_not_disturb_alt", "check"
+"Radio Toggle":
+  "radio_button_unchecked", "radio_button_checked"
+"Check Toggle":
+  "check", "crop_square", "check_box"
+"Dropdown Toggle":
+  "arrow_drop_down", "arrow_drop_up"
+"Views":
+  "view_list", "view_module", "view_compact", "view_array", "dashboard", "view_quilt", "view_day", "view_headline", "view_column", "view_comfy", "vibration", "view_week", "apps"
+"Extra":
+  "pages", "copyright", "healing"
+"Share":
+  "share", "attachment"

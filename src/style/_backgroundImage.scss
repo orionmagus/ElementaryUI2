@@ -1,0 +1,9 @@
+.linearbg01 {
+  background-image: linear-gradient(
+    var(--bg-rotate),
+    rgba(150, 150, 150, 0.3),
+    transparent 70%,
+    transparent 90%,
+    rgba(150, 150, 150, 0.15) 90.01%
+  );
+}

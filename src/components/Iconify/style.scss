@@ -1,0 +1,16 @@
+.square {
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+  background-color: #7971ea;
+}
+
+.full-screen-square {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: #ff4c46;
+}
